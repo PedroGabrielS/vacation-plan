@@ -17,15 +17,9 @@ This is a Laravel project designed to manage vacation plans. Below are the instr
 2. Create the database using the following command:
 
     ```bash
-    docker exec -it vacation-plan-postgres-1 psql -U root
+    docker exec -it vacation-plan-postgres-1 psql -U root -c "CREATE DATABASE vacation;"
     ```
-    
-    After accessing the container, execute the command to create the table
-     ```bash
-    "CREATE DATABASE vacation;"
-    ```
-    
-
+       
 ### Project Dependencies
 
 - Laravel Framework: v10.48.1

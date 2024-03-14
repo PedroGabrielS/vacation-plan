@@ -8,7 +8,7 @@ This is a Laravel project designed to manage vacation plans. Below are the instr
 
 ### Docker and Database Configuration
 
-1. Run the following command to execute the Docker configuration:
+1. Run the following commands in your project's root directory to run the Docker configuration:
 
     ```bash
     docker-compose up -d

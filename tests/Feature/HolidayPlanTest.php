@@ -125,7 +125,7 @@ class HolidayPlanTest extends TestCase
 
         $response->assertStatus(200)
             ->assertJson([
-                'message' => "Plano de férias removido com sucesso!"
+                'message' => "Holiday plan removed successfully!"
             ]);
     }
 

@@ -88,7 +88,7 @@ class HolidayPlanController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api//holiday-plan/{id}",
+     *     path="/api/holiday-plan/{id}",
      *     operationId="getHolidayById",
      *     tags={"Holiday Plans"},
      *     summary="Get holiday by ID",
@@ -384,14 +384,14 @@ class HolidayPlanController extends Controller
         $holiday = HolidayPlan::find($id);
 
         if (!$holiday) {
-            return response()->json(['message' => 'Registro não encontrado.'], 404);
+            return response()->json(['message' => 'Record not found.'], 404);
         }
 
         $holiday->delete();
 
         DB::commit();
 
-        return response()->json(['message' => 'Plano de férias removido com sucesso!'], 200);
+        return response()->json(['message' => 'Holiday plan removed successfully!'], 200);
     }
 
     /**

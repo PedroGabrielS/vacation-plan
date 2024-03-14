@@ -35,9 +35,6 @@ Run the following commands in the root directory of your project:
 ```bash
 composer install
 ```
-```bash
-php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
-```
 
 ```bash
 php artisan vendor:publish --provider="L5Swagger\L5SwaggerServiceProvider"

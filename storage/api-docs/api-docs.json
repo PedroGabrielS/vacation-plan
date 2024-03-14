@@ -160,7 +160,7 @@
                 ]
             }
         },
-        "/api//holiday-plan/{id}": {
+        "/api/holiday-plan/{id}": {
             "get": {
                 "tags": [
                     "Holiday Plans"
@@ -242,134 +242,7 @@
                         "bearerAuth": []
                     }
                 ]
-            }
-        },
-        "/api/holiday-plan": {
-            "post": {
-                "tags": [
-                    "Holiday Plans"
-                ],
-                "summary": "Create a new holiday plan",
-                "description": "Create a new holiday plan.",
-                "operationId": "storeHolidayPlan",
-                "requestBody": {
-                    "description": "Holiday plan data",
-                    "required": true,
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "required": [
-                                    "title",
-                                    "description",
-                                    "date",
-                                    "location",
-                                    "participants"
-                                ],
-                                "properties": {
-                                    "title": {
-                                        "type": "string",
-                                        "example": "Summer Vacation"
-                                    },
-                                    "description": {
-                                        "type": "string",
-                                        "example": "Let's go to the most famous resort in Brazil"
-                                    },
-                                    "date": {
-                                        "type": "string",
-                                        "format": "date",
-                                        "example": "2024-12-12"
-                                    },
-                                    "location": {
-                                        "type": "string",
-                                        "example": "Fernando de Noronha"
-                                    },
-                                    "participants": {
-                                        "type": "array",
-                                        "items": {
-                                            "type": "string",
-                                            "example": "Pedro"
-                                        }
-                                    }
-                                },
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "201": {
-                        "description": "Holiday plan created successfully",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "properties": {
-                                        "message": {
-                                            "type": "string",
-                                            "example": "Plan created successfully!"
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    },
-                    "400": {
-                        "description": "Bad request",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "properties": {
-                                        "message": {
-                                            "type": "string",
-                                            "example": "Validation error"
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    },
-                    "401": {
-                        "description": "Unauthorized",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "properties": {
-                                        "message": {
-                                            "type": "string",
-                                            "example": "Unauthorized"
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    },
-                    "500": {
-                        "description": "Internal server error",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "properties": {
-                                        "message": {
-                                            "type": "string",
-                                            "example": "Failed to register plan. ERROR: {error_message}"
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            }
-        },
-        "/api/holiday-plan/{id}": {
+            },
             "put": {
                 "tags": [
                     "Holiday Plans"
@@ -613,6 +486,131 @@
                 ]
             }
         },
+        "/api/holiday-plan": {
+            "post": {
+                "tags": [
+                    "Holiday Plans"
+                ],
+                "summary": "Create a new holiday plan",
+                "description": "Create a new holiday plan.",
+                "operationId": "storeHolidayPlan",
+                "requestBody": {
+                    "description": "Holiday plan data",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "title",
+                                    "description",
+                                    "date",
+                                    "location",
+                                    "participants"
+                                ],
+                                "properties": {
+                                    "title": {
+                                        "type": "string",
+                                        "example": "Summer Vacation"
+                                    },
+                                    "description": {
+                                        "type": "string",
+                                        "example": "Let's go to the most famous resort in Brazil"
+                                    },
+                                    "date": {
+                                        "type": "string",
+                                        "format": "date",
+                                        "example": "2024-12-12"
+                                    },
+                                    "location": {
+                                        "type": "string",
+                                        "example": "Fernando de Noronha"
+                                    },
+                                    "participants": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "example": "Pedro"
+                                        }
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Holiday plan created successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Plan created successfully!"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Validation error"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Unauthorized"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Failed to register plan. ERROR: {error_message}"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
         "/api/holiday-plan/{id}/pdf": {
             "get": {
                 "tags": [
@@ -637,12 +635,7 @@
                     "200": {
                         "description": "PDF generated successfully",
                         "content": {
-                            "application/pdf": {
-                                "schema": {
-                                    "type": "string",
-                                    "format": "binary"
-                                }
-                            }
+                            "application/pdf": {}
                         }
                     },
                     "404": {
